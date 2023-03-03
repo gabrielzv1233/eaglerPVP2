@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html>
-
+<script> if ( window !== window.parent ) 
+{
+      // The page is in an iframe   
+//window.location.replace("https://open-project-in-new-tab-plz.gabrielzv1233.repl.co");
+} 
+else 
+{     
+      // The page is not in an iframe   
+}
+</script>
+  <html>
 <head>
-	<title>Precision Client (1.5.2-beta_0.2)</title>
-	<meta charset="UTF-8" />
-	<meta content="Precision Client is a custom eaglercraft client with QOL features, custom texture packs, and more." name="description" />
+	<title>eaglerPVP2</title>
+      <link type="image/png" rel="shortcut icon" href="favicon.png" />
+  <meta charset="UTF-8" />
+	<meta content="eaglerPVP2.0 is a fork of Precision Client is a custom eaglercraft client with QOL features, custom texture packs, and more." name="description" />
 	<meta content="//precisionclient.vercel.app" name="url" />
-	<meta content="EtcherFX" name="author" />
-	<meta content="Precision Client" property="og:title" />
+	<meta content="Gabrielzv1233" name="author" />
+	<meta content="eaglerPVP2.0" property="og:title" />
 	<meta content="en-US" property="og:locale" />
 	<meta content="website" property="og:type" />
 	<meta content="//precisionclient.vercel.app" property="og:url" />
 	<!--meta content="IMAGE" property="og:image"/>-->
-	<meta content="Precision Client is a custom eaglercraft client with QOL features, custom texture packs, and more."
+	<meta content="eaglerPVP2.0 is a fork of Precision Client is a custom eaglercraft client with QOL features, custom texture packs, and more."
 		property="og:description" />
 	<script type="text/javascript" src="eagswebrtc.js"></script>
 	<script type="text/javascript" src="classes.js"></script>
-	<script async src="https://arc.io/widget.min.js#pchPqjfw"></script>
 	<style>
 		@font-face {
 			font-family: "Product Sans";
@@ -31,23 +40,27 @@
 		style="display: inline-block; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%)">
 		<style>
 			html {
-				color: #fff;
+				color: #ffffff;
 			}
 
 			.starter {
-				border-radius: 5px;
-				border: 1px solid #fff;
-				background-color: #0d0c0c;
-				color: #fff;
+				background-color: #5a5a5a;
+				color: #ffffff;
+        width: 100%;
+        height: 100;
+        border: none;
+        scale: 300%;
 			}
 
 			.dropdown {
 				position: relative;
-				display: inline-block;
+				display: none;
 				border-radius: 5px;
-				border: 1px solid #fff;
-				background-color: #0d0c0c;
+				border: 1px solid #ffffff;
+				background-color: #ffffff;
 				color: #fff;
+        width: 0px;
+        height: 0px;
 			}
 
 			.gameframe {
@@ -56,23 +69,12 @@
 				background-repeat: no-repeat;
 			}
 		</style>
-		<h1>Precision Client</h1>
-		<h3>Select a texture pack:</h3>
-		<select id="Packs" class="dropdown">
-			<option>-- Choose one --</option>
-			<option value="defaultold">Default Old</option>
-			<option value="defaultnew">Default 1.17+</option>
-			<option value="bombies">Bombies 180k</option>
-			<option value="bones">Bare Bones</option>
-			<option value="modifiednew">Modified 1.17+</option>
-			<option value="miamiprivate">Miami Private</option>
-			<option value="nebula">Nebula</option>
-			<option value="ricefault">Ricefault</option>
-			<option value="tightfault">Tightfault</option>
-			<option value="walifault">Walifault</option>
-		</select>
-		<br /><br />
-		<input class="starter" type="button" value="Launch" onclick="Start();" />
+		<h1>eaglerPVP2</h1>
+		<select id="Packs" class="dropdown" >
+		<option value="eaglerpvp2">eaglerpvp2</option>
+  </select>
+    <br /><br />
+		<input class="starter" type="button" value="click to play" onclick="Start();" />
 	</div>
 	<script type="text/javascript">
 		if (document.location.href.startsWith("file:")) {
@@ -80,7 +82,7 @@
 		} else {
 			var PackSelect = document.getElementById("Packs");
 			function Start() {
-				if (PackSelect.selectedIndex !== 0) {
+				if (PackSelect.selectedIndex !== 1) {
 					var Selected = PackSelect.options[PackSelect.selectedIndex].value;
 					document.getElementById("Selection").style.display = "none";
 					localStorage.LastPack = Selected;
@@ -91,13 +93,12 @@
 						serverWorkerURI: "worker_bootstrap.js",
 						worldsFolder: "MAIN",
 						servers: [
-							{ serverName: "A*spixel", serverAddress: "wss://web.asspixel.net/CAPixel/", hideAddress: true },
-							{ serverName: "VanillaCraft", serverAddress: "wss://play.vanillacraftsmp.org/", hideAddress: true },
-							{ serverName: "ArchMC", serverAddress: "wss://web.arch.lol/join", hideAddress: true },
-							{ serverName: "Hyper Network", serverAddress: "wss://hyper-network.me", hideAddress: true },
-							{ serverName: "Ayunboom", serverAddress: "wss://sus.shhnowisnottheti.me", hideAddress: true },
-							{ serverName: "Aeon Network", serverAddress: "wss://aeon-network.net/aeon", hideAddress: true },
-							{ serverName: "Sealcraft", serverAddress: "wss://sealcraft.ddns.net:442/servers", hideAddress: true }
+	{ serverName: "Asspixel", serverAddress: "wss://web.asspixel.net/CAPixel/", hideAddress: true },
+//	{ serverName: "VanillaCraft", serverAddress: "wss://play.vanillacraftsmp.org/", hideAddress: true },
+  { serverName: "Hyper Network", serverAddress: "wss://hyper-network.me", hideAddress: true },
+{ serverName: "MCIS", serverAddress: "wss://mcis.gabrielzv1233.repl.co/server", hideAddress: true },
+{ serverName: "MCV", serverAddress: "wss://0ab836c0-65b7-4246-90be-45887527e421.id.repl.co/server", hideAddress: true },
+  //{ serverName: "placeholder", serverAddress: "wss://", hideAddress: true },
 						],
 						relays: [
 							{ addr: "wss://relay.deev.is/", name: "lax1dude relay #1", primary: relayId == 0 },
@@ -105,7 +106,7 @@
 							{ addr: "wss://relay.shhnowisnottheti.me/", name: "ayunami relay #1", primary: relayId == 2 }
 						],
 						mainMenu: {
-							splashes: [], eaglerLogo: false
+							splashes: [], eaglerLogo: true
 						}
 					};
 					(function () {
