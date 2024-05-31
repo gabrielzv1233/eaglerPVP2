@@ -1,2 +1,1 @@
-# PrecisionClient-Static
- The static web files for Precision Client
+PvP client for eaglercraft
